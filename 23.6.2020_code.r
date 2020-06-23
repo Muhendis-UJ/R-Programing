@@ -15,3 +15,10 @@ R_code = "this is new code file"
   x %*% y #matrix dot product
   
 #Date & Time
+  x <- Sys.time() #to check current system time
+  class(x)    #this shows it x has two classes "POSIXct", "POSIXlt"
+  p <- as.POSIXlt(x) #converting to POSIXlt which has many attributes
+  names(unclass(p)) #show all attributes like sec,min,hour etc
+  p$sec #shows seconds
+  p$zone #show time zone
+  
